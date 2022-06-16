@@ -1,0 +1,49 @@
+#footer {
+    margin-top: 20px;
+    padding: 30px 40px;
+    background: #0091cd;
+    border-top: solid 3px #007baf;
+}
+
+#footer > div {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer > div:first-of-type , #footer > div:nth-of-type(3) {
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+#footer > div:nth-of-type(2) {
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer a {
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+#footer * {
+    color: white;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+}
+
+/* Let's stack the anchor tags when the corner divs shrink too much for a one-line row */
+@media (max-width: 1500px) {
+    #footer > div:first-of-type , #footer > div:nth-of-type(3) {
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+    #footer a {
+        padding: 6px 0;
+    }
+}

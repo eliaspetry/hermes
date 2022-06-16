@@ -1,0 +1,118 @@
+#banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Both the banner and the inner curved-edge div will use the same background gradient */
+#banner, #banner > div > div {
+    background: #0091cd;
+    background: -webkit-linear-gradient(to bottom, rgb(74, 182, 228), #0091cd);
+    background: linear-gradient(to bottom, rgb(74, 182, 228), #0091cd);
+}
+
+#banner > div, #mobileBannerImage {
+    background: url("../../public/images/header.jpg");
+}
+
+/* 
+Since no resource was provided, we can try to emulate a rounded effect on the main banner with border-radius percentages using overlapped divs.
+Alternatively, we could recreate the identical shape shown on the mockup by editing the image directly or creating a svg, but let's stick with this temporary solution for now.
+*/
+
+#banner > div {
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    max-width: 1170px;
+    height: 234px;
+}
+
+#banner > div > div {
+    position: absolute;
+    max-width: 500px;
+    height: 234px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+#banner h1 {
+    color: #ffffff;
+    text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+    font-size: 32px;
+}
+
+#paperPlaneIcon {
+    width: 90px;
+    filter: drop-shadow(0px 20px 10px rgba(0, 0, 0, 0.15));
+    margin-top: -15px;
+    transform: rotate(50deg); /* This avoids any visual glitches while overwriting our animation class */
+}
+
+/* Paper plane animations */
+@keyframes paper-plane-slide-in {
+    0% {transform: translateX(-50vw) rotate(50deg);}
+    100% {transform: translateX(0%) rotate(50deg);}
+}
+
+@keyframes paper-plane-spin {
+    0% {transform: rotate(50deg);}
+    25% {transform: rotate(0deg);}
+    50% {transform: rotate(50deg);}
+    75% {transform: rotate(100deg);}
+    100% {transform: rotate(50deg);}
+}
+
+.planeSlideIn {
+    animation:  paper-plane-slide-in 4s ease-out;
+}
+
+.planeSpin {
+    animation:  paper-plane-spin 8s infinite ease;
+}
+
+#mobileBannerImage {
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #banner > div > div {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        max-width: 600px;
+        width: 100%;
+        height: 100px;
+    }
+
+    #banner > div {
+        height: 100px;
+    }
+
+    #banner h1 {
+        text-align: center;
+        font-size: 24px;
+    }
+
+    #paperPlaneIcon {
+        display: none;
+    }
+
+    #mobileBannerImage {
+        display: block;
+        height: 200px;
+        background-size: cover;
+        background-position-X: right;
+    }
+}
+
+@media (max-width: 357px) {
+    #banner h1 {
+        font-size: 20px;
+    }
+}

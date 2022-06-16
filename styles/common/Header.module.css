@@ -1,0 +1,22 @@
+#logoRow {
+    padding: 30px 40px;
+    background: #fcfdfd;
+    background: -webkit-linear-gradient(to right, #fcfdfd, #eefaff);
+    background: linear-gradient(to right, #fcfdfd, #eefaff);
+    filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.2));
+    border-bottom: solid 1px #e2e2e2;
+    z-index: 999; /*We'll bring it to the foreground to make the shadow overlap */
+}
+
+#logoRow > div {
+    width: 200px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #logoRow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

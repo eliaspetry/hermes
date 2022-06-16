@@ -1,0 +1,134 @@
+#descriptionRight {
+    margin: 39px 25px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    background: #fafafa;
+    background: -webkit-linear-gradient(to top, #fafafa, #eeeeee);
+    background: linear-gradient(to top, #fafafa, #eeeeee);
+    height: 90%;
+}
+
+#descriptionRight h2, #descriptionRight p, .compulsoryFieldWarning span {
+    color: #0091cd;
+}
+
+#descriptionRight p:first-of-type {
+    color: #5d5d5d;
+    font-weight: bolder;
+}
+
+#descriptionRight h2 {
+    font-size: 28px;
+}
+
+#descriptionRight p {
+    font-size: 18px;
+}
+
+#descriptionRight > div:first-of-type {
+    position: relative;
+    border-radius: 7px;
+    background: #d2d6d8;
+    background: -webkit-linear-gradient(to bottom, #ebeef0, #d2d6d8);
+    background: linear-gradient(to top, #ebeef0, #d2d6d8);
+    margin-left: 50px;
+    padding: 20px;
+    padding-left: 130px;
+}
+
+#descriptionRight ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#descriptionRight li {
+    padding: 8px 0;
+}
+#eccDocument {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: -180px;
+}
+
+#descriptionRight > div:nth-of-type(2) p {
+    text-align: center;
+}
+
+#questionPrompt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#questionmark {
+    margin-right: 20px;
+}
+
+#promptBackground {
+    position: relative;
+    margin-top: 120px;
+    background: url("../../public/images/hermes_delivery.jpg");
+    background-size: cover;
+    height: 200px;
+}
+
+#promptForeground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background-color: #e0e0e0dc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#promptForeground:hover {
+    background-color: #cae3eedc;
+    cursor: pointer;
+}
+
+.mail {
+    color: black;
+}
+
+#eccDocumentMobile {
+    display: none;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    #eccDocument {
+        display: none;
+    }
+
+    #eccDocumentMobile {
+        display: block;
+        width: 150px;
+    }
+
+    #descriptionRight {
+        margin: 0;
+        padding: 30px;
+    }
+
+    #descriptionRight > div:first-of-type {
+        position: relative;
+        border-radius: 7px;
+        background: #d2d6d8;
+        background: -webkit-linear-gradient(to bottom, #ebeef0, #d2d6d8);
+        background: linear-gradient(to top, #ebeef0, #d2d6d8);
+        margin-left: 0;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #promptBackground {
+        margin-top: 25px;
+    }
+}

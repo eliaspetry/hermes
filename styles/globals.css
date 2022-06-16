@@ -1,0 +1,22 @@
+/* Fontface for Marselis OT */
+@font-face {
+  font-family: "MarselisOT";
+  src: url("/fonts/marselis_ot.otf");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "MarselisOT", sans-serif;
+  min-width: 321px; /*Bare minimum acceptable width, else we'll enforce browser scaledown or scroll*/
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
